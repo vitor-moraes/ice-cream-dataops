@@ -134,6 +134,14 @@ built_resources:
       hash: ad7e9d3f
     kind: Source
     destination: build/hosted_extractors/7.Source.yaml
+  extraction_pipelines:
+  - identifier:
+      externalId: ep_icapi_datapoints
+    source:
+      path: /workspaces/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api/extraction_pipelines/ep_icapi_datapoints.ExtractionPipeline.yaml
+      hash: 1a1814d6
+    kind: ExtractionPipeline
+    destination: build/extraction_pipelines/1.ep_icapi_datapoints.ExtractionPipeline.yaml
   transformations:
   - identifier:
       externalId: contextualize_ts_assets
@@ -165,19 +173,20 @@ built_resources:
 read_modules:
 - dir: /workspaces/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/use_cases/oee
   resource_directories:
-  - data_models
   - data_sets
-  - auth
+  - data_models
   - functions
+  - auth
 - dir: /workspaces/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/data_foundation
   resource_directories:
   - auth
 - dir: /workspaces/ice-cream-dataops/ice-cream-dataops/modules/bootcamp/ice_cream_api
   resource_directories:
-  - hosted_extractors
   - data_models
-  - auth
   - functions
   - data_sets
   - transformations
+  - hosted_extractors
+  - extraction_pipelines
   - raw
+  - auth
