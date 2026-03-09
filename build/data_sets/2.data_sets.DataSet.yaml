@@ -1,0 +1,6 @@
+- externalId: ds_icapi
+  name: asset:iceCreamFactorySourceData
+  description: Ice Cream Factory Source Data
+  writeProtected: false
+  metadata:
+    origin: cognite-toolkit
