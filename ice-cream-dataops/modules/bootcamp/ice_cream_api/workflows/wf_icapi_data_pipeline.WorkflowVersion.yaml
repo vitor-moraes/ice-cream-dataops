@@ -5,9 +5,9 @@ workflowDefinition:
     - externalId: create_asset_hierarchy
       type: function
       parameters:
-        function:
+        transformation:
           externalId: create_asset_hierarchy
-          data: { "hours": 1 }
+          data: {}
       retries: 3
       timeout: 3600
       onFailure: abortWorkflow
@@ -15,9 +15,9 @@ workflowDefinition:
     - externalId: contextualize_ts_assets
       type: function
       parameters:
-        function:
+        transformation:
           externalId: contextualize_ts_assets
-          data: { "hours": 1 }
+          data: {}
       retries: 3
       timeout: 3600
       onFailure: abortWorkflow
@@ -41,7 +41,7 @@ workflowDefinition:
       parameters:
         function:
           externalId: oee_timeseries
-          data: { "hours": 1 }
+          data: { "sites": ["Sao_Paulo", "Houston", "Oslo", "Kuala_Lumpur", "Hannover", "Nuremberg", "Marseille", "Chicago", "Rotterdam", "London"], "hours": 336, "backfill": true }
       retries: 3
       timeout: 3600
       onFailure: abortWorkflow
