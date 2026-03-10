@@ -1,6 +1,0 @@
-- externalId: {{ uc_oee_ds_external_id }}
-  name: asset:overallEquipmentEffectivenessUseCase
-  description: Overall Equipment Effectiveness Use Case
-  writeProtected: false
-  metadata:
-    origin: cognite-toolkit
