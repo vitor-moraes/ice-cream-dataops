@@ -3,7 +3,7 @@ version: '1'
 workflowDefinition:
   tasks:
     - externalId: create_asset_hierarchy
-      type: function
+      type: transformation
       parameters:
         transformation:
           externalId: create_asset_hierarchy
@@ -13,7 +13,7 @@ workflowDefinition:
       onFailure: abortWorkflow
 
     - externalId: contextualize_ts_assets
-      type: function
+      type: transformation
       parameters:
         transformation:
           externalId: contextualize_ts_assets
